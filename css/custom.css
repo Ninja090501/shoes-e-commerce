@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('../fonts/AirbnbCerealWBd.eot');
+    src: url('../fonts/AirbnbCerealWBd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AirbnbCerealWBd.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWBd.woff') format('woff'),
+        url('../fonts/AirbnbCerealWBd.ttf') format('truetype'),
+        url('../fonts/AirbnbCerealWBd.svg#AirbnbCerealWBd') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('../fonts/AirbnbCerealWMd.eot');
+    src: url('../fonts/AirbnbCerealWMd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AirbnbCerealWMd.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWMd.woff') format('woff'),
+        url('../fonts/AirbnbCerealWMd.ttf') format('truetype'),
+        url('../fonts/AirbnbCerealWMd.svg#AirbnbCerealWMd') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('../fonts/AirbnbCerealWXBd.eot');
+    src: url('../fonts/AirbnbCerealWXBd.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AirbnbCerealWXBd.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWXBd.woff') format('woff'),
+        url('../fonts/AirbnbCerealWXBd.ttf') format('truetype'),
+        url('../fonts/AirbnbCerealWXBd.svg#AirbnbCerealWXBd') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('../fonts/AirbnbCerealWLt.eot');
+    src: url('../fonts/AirbnbCerealWLt.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AirbnbCerealWLt.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWLt.woff') format('woff'),
+        url('../fonts/AirbnbCerealWLt.ttf') format('truetype'),
+        url('../fonts/AirbnbCerealWLt.svg#AirbnbCerealWLt') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AirbnbCereal';
+    src: url('../fonts/AirbnbCerealWBk.eot');
+    src: url('../fonts/AirbnbCerealWBk.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AirbnbCerealWBk.woff2') format('woff2'),
+        url('../fonts/AirbnbCerealWBk.woff') format('woff'),
+        url('../fonts/AirbnbCerealWBk.ttf') format('truetype'),
+        url('../fonts/AirbnbCerealWBk.svg#AirbnbCerealWBk') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* All Common Using Variables. */
+:root{
+
+    
+    --AirbnbCerealApp: 'AirbnbCereal';
+
+    --background: #1A2530;
+    --white: #fff;
+    
+    --color-1: #707B81;
+    --color-2: #161F28;
+    --color-3: #737373;
+    --color-4: #F87265;
+    --color-5: #E5EEF7;
+
+    --btn-bg: #5B9EE1;
+
+    --font-1: 40px;
+    --font-2: 28px;
+    --font-3: 24px;
+    --font-4: 20px;
+    --font-5: 18px;
+    --font-6: 16px;
+    --font-7: 14px;
+    --font-8: 12px;
+}
+
+*{
+    font-family: var(--AirbnbCerealApp);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 676px;
+}
+
+body{
+    background: var(--background);
+    color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+
+a,button {
+    display: inline-block;
+    text-decoration: none;
+	transition: all .4s;
+}
+
+button:hover,
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul, ol{
+    padding: 0;
+    margin: 0;
+}
+
+ul li, ol li{
+    list-style-type: none;
+}
+
+/* Screen 1,2,3 CSS Starts */
+.screen-wrapper{
+    padding: 130px 10px 40px;
+    height: 100vh;
+    position: relative;
+}
+
+.screen-wrapper:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../images/bg-img.png') no-repeat;
+    background-size: 100% auto;
+    background-position: top right;
+    width: 181px;
+    height: 207px;
+}
+
+.screen-wrapper .slider-container .slider-img img{
+    width: 100%;
+}
+
+.screen-wrapper .slider-container .slider-content {
+    margin: 20px 0;
+}
+
+.screen-wrapper .slider-container .slider-content h2{
+    font-size: var(--font-1);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.4em;
+    text-transform: capitalize;
+}
+
+.screen-wrapper .slider-container .slider-content p{
+    font-size: var(--font-4);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.6em;
+}
+
+.screen-wrapper .slider-action{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.screen-wrapper .slider-action .slider-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.screen-wrapper .slider-action .slider-nav ul li {
+    width: 8px;
+    height: 5px;
+    background: var(--color-5);
+    border-radius: 16px;
+    margin-right: 8px;
+}
+
+.screen-wrapper .slider-action .slider-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.screen-wrapper .slider-action .slider-nav ul li.active {
+    background: var(--btn-bg);
+    width: 35px;
+}
+
+.screen-wrapper .slider-action .slider-btn a.btn{
+    background: var(--btn-bg);
+    color: var(--white);
+    border: none;
+    padding: 16px 32px;
+    font-size: var(--font-5);
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.screen-wrapper .slider-action .slider-btn a.btn:hover{
+    background: var(--white);
+    color: var(--color-2)
+}
+/* Screen 1,2,3 CSS Ends */
