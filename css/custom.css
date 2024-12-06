@@ -120,6 +120,11 @@ a:hover {
     text-decoration: none;
 }
 
+a:focus{
+    outline: none;
+    box-shadow: none;
+}
+
 img {
     max-width: 100%;
 }
@@ -231,6 +236,7 @@ ul li, ol li{
 .signin-wrapper{
     padding: 40px 10px;
     height: 100vh;
+    position: relative;
 }
 
 .signin-wrapper .back-btn .btn.btn-back{
@@ -256,7 +262,7 @@ ul li, ol li{
 
 .signin-wrapper .signin-heading{
     text-align: center;
-    margin: 10px 0;
+    margin: 20px 0 60px;
 }
 
 .signin-wrapper .signin-heading h2{
@@ -303,20 +309,83 @@ ul li, ol li{
     color: var(--white);
 }
 
-.signin-wrapper .signin-form form .form-group.pwd{
+.signin-wrapper .signin-form form .form-group .pwd-field{
     position: relative;
 }
 
-.signin-wrapper .signin-form form .form-group.pwd:after{
-    content: '';
+.signin-wrapper .signin-form form .form-group .pwd-field svg{
     position: absolute;
-    bottom: 0;
-    right: 0;
-    background: url('../images/eye.svg') no-repeat center center;
-    background-size: 100% auto;
-    width: 24px;
-    height: 24px;
-    transition: all .3s;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
 }
 
+.signin-wrapper .signin-form form .form-group a.recovery-pwd{
+    width: 100%;
+    font-size: var(--font-7);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+    text-align: right;
+}
+
+.signin-wrapper .signin-form form .form-group a.recovery-pwd:hover{
+    color: var(--white);
+}
+
+.signin-wrapper .signin-form form .form-group .btn{
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 30px;
+    font-size: var(--font-6);
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+.signin-wrapper .signin-form form .form-group .btn:last-child{
+    margin-bottom: 0;
+}
+
+.signin-wrapper .signin-form form .form-group .btn.btn-submit{
+    background: var(--btn-bg);
+    color: var(--white);
+}
+
+.signin-wrapper .signin-form form .form-group .btn.google-signin{
+    background: var(--color-2);
+    color: var(--white);
+}
+
+.signin-wrapper .signin-form form .form-group .btn.google-signin img{
+    margin-right: 10px;
+}
+
+.signin-wrapper .signin-form form .form-group .btn.google-signin:hover{
+    background: var(--btn-bg);
+}
+
+.signin-wrapper .sign-up-link{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.signin-wrapper .sign-up-link p{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.6em;
+}
+
+.signin-wrapper .sign-up-link p a{
+    font-weight: 500;
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.signin-wrapper .sign-up-link p a:hover{
+    color: var(--btn-bg);
+}
 /* Sign-In Screen CSS Ends */
