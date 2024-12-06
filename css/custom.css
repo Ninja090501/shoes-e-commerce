@@ -226,3 +226,97 @@ ul li, ol li{
     color: var(--color-2)
 }
 /* Screen 1,2,3 CSS Ends */
+
+/* Sign-In Screen CSS Starts */
+.signin-wrapper{
+    padding: 40px 10px;
+    height: 100vh;
+}
+
+.signin-wrapper .back-btn .btn.btn-back{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: var(--color-2);
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.signin-wrapper .back-btn .btn.btn-back i{
+    color: var(--white)
+}
+
+.signin-wrapper .back-btn .btn.btn-back:hover{
+    background: var(--btn-bg);
+}
+
+.signin-wrapper .signin-heading{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.signin-wrapper .signin-heading h2{
+    font-size: var(--font-2);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.signin-wrapper .signin-heading p{
+    font-size: var(--font-4);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.6em;
+}
+
+.signin-wrapper .signin-form form .form-group{
+    margin-bottom: 20px;
+}
+
+.signin-wrapper .signin-form form .form-group label{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.signin-wrapper .signin-form form .form-group input{
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 50px;
+    background: var(--color-2);
+    color: var(--white);
+}
+
+.signin-wrapper .signin-form form .form-group input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.signin-wrapper .signin-form form .form-group input::placeholder{
+    color: var(--white);
+}
+
+.signin-wrapper .signin-form form .form-group.pwd{
+    position: relative;
+}
+
+.signin-wrapper .signin-form form .form-group.pwd:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url('../images/eye.svg') no-repeat center center;
+    background-size: 100% auto;
+    width: 24px;
+    height: 24px;
+    transition: all .3s;
+}
+
+/* Sign-In Screen CSS Ends */
