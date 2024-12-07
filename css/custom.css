@@ -88,6 +88,7 @@
     --font-6: 16px;
     --font-7: 14px;
     --font-8: 12px;
+    --font-9: 10px;
 }
 
 *{
@@ -389,3 +390,191 @@ ul li, ol li{
     color: var(--btn-bg);
 }
 /* Sign-In Screen CSS Ends */
+
+/* Home Page CSS Starts */
+.header-section{
+    padding: 20px 10px;
+}
+
+.header-section .filter-btn a,
+.header-section .whishlist-btn a{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    background: var(--color-2);
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.header-section .filter-btn a:hover,
+.header-section .whishlist-btn a:hover{
+    background-color: var(--btn-bg);
+}
+
+.header-section .whishlist-btn{
+    position: relative;
+}
+
+.header-section .whishlist-btn:after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    right: -5px;
+    background: var(--color-4);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+
+.header-section .location{
+    text-align: center;
+}
+
+.header-section .location p{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.6em;
+}
+
+.header-section .location h2{
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    position: relative;
+    vertical-align: middle;
+}
+
+.search-section{
+    padding: 20px 10px;
+}
+
+.search-section .search form .form-group input{
+    width: 100%;
+    padding: 16px 20px 16px 60px;
+    border: none;
+    border-radius: 50px;
+    background: var(--color-2);
+    color: var(--white);    
+}
+
+.search-section .search form .form-group input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.search-section .search form .form-group{
+    position: relative;
+}
+
+.search-section .search form .form-group svg{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+}
+
+.brand-section{ 
+    padding: 10px;
+}
+
+.brand-section .brand ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-section .brand ul li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: var(--color-2);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .1s;
+}
+
+.brand-section .brand ul li span{
+    display: none;
+    font-size: var(--font-8);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.brand-section .brand ul li:hover span{
+    display: block;
+}
+
+.brand-section .brand ul li:hover span svg{
+    display: inline-block;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.brand-section .brand ul li:hover > svg{
+    display: none;
+}
+
+.brand-section .brand ul li:hover{
+    background: var(--btn-bg);
+    width: 100px;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+
+.popular-shoes-section{
+    padding: 10px;
+}
+
+.popular-shoes-section .heading-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-shoes-section .heading-section h2{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.popular-shoes-section .heading-section a{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--btn-bg);
+}
+
+.popular-shoes-section .heading-section a:hover{
+    color: var(--white);
+}
+
+.popular-shoes-section .shoes-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular-shoes-section .shoes-list .item{
+    width: calc( 50% - 10px );
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 16px;
+    background: var(--color-2);
+}
+
+.popular-shoes-section .shoes-list .item:nth-of-type( 2n + 2 ){
+    margin-right: 0;
+}
+
+
+/* Home Page CSS Ends */
