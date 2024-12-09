@@ -518,6 +518,7 @@ ul li, ol li{
     display: inline-block;
     width: 25px !important;
     height: 25px !important;
+    margin-right: 5px;
 }
 
 .brand-section .brand ul li:hover > svg{
@@ -531,31 +532,37 @@ ul li, ol li{
     justify-content: space-between;
 }
 
-.popular-shoes-section{
+.popular-shoes-section,
+.new-arrivals-section{
     padding: 10px;
 }
 
-.popular-shoes-section .heading-section{
+.popular-shoes-section .heading-section,
+.new-arrivals-section .heading-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.popular-shoes-section .heading-section h2{
+.popular-shoes-section .heading-section h2,
+.new-arrivals-section .heading-section h2{
     font-size: var(--font-6);
     font-weight: 500;
     color: var(--white);
     line-height: 1.2em;
 }
 
-.popular-shoes-section .heading-section a{
+.popular-shoes-section .heading-section a,
+.new-arrivals-section .heading-section a{
     font-size: var(--font-8);
     font-weight: 400;
     color: var(--btn-bg);
 }
 
-.popular-shoes-section .heading-section a:hover{
+.popular-shoes-section .heading-section a:hover,
+.new-arrivals-section .heading-section a:hover{
     color: var(--white);
 }
 
@@ -570,11 +577,250 @@ ul li, ol li{
     padding: 10px;
     border-radius: 16px;
     background: var(--color-2);
+    position: relative;
 }
 
 .popular-shoes-section .shoes-list .item:nth-of-type( 2n + 2 ){
     margin-right: 0;
 }
 
+.popular-shoes-section .shoes-list .item .item-img{
+    text-align: center;
+}
 
+.popular-shoes-section .shoes-list .item .item-img img{
+    transform: rotate(10deg);
+}
+
+.popular-shoes-section .shoes-list .item .item-info h5{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--btn-bg);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.popular-shoes-section .shoes-list .item .item-info h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.popular-shoes-section .shoes-list .item .item-info p{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.popular-shoes-section .shoes-list .item .item-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.popular-shoes-section .shoes-list .item .item-btn a{
+    display: inline-block;
+    padding: 6px 10px;
+    background: var(--btn-bg);
+    color: var(--white);
+    border-radius: 16px 0 16px 0;
+}
+
+.popular-shoes-section .shoes-list .item .item-btn a:hover{
+    background: var(--white);
+    color: var(--btn-bg);
+}
+
+.new-arrivals-section .new-arrivals{
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--color-2);
+}
+
+.new-arrivals-section .new-arrivals .arrivals-detail h5{
+    font-size: var(--font-8);
+    font-weight: 500;
+    color: var(--btn-bg);
+    line-height: 1.2em;
+    text-transform: uppercase;
+}
+
+.new-arrivals-section .new-arrivals .arrivals-detail h2{
+    font-size: var(--font-4);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+}
+
+.new-arrivals-section .new-arrivals .arrivals-detail p{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-top: 20px;
+}
+
+.new-arrivals-section .new-arrivals .arrivals-img img{
+    width: 100%;
+    transform: rotate(-14.5deg);
+}
+
+.footer-section{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px 10px 30px;
+    background: url('../images/footer-bg-img.png') no-repeat bottom center;
+    background-size: 100% 100%;
+}
+
+.footer-section .footer-menu ul{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section .footer-menu ul li a:hover svg path{
+    fill: var(--btn-bg);
+}
+
+.footer-section .footer-menu ul li.whishlist-menu-item{
+    margin-top: -80px;
+}
+
+.footer-section .footer-menu ul li.whishlist-menu-item a{
+    width: 56px;
+    height: 56px;
+    background: var(--btn-bg);
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: nowrap;  
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section .footer-menu ul li.whishlist-menu-item a:hover{
+    background: var(--color-2);
+}
+
+.footer-section .footer-menu ul li.heart-menu-item a:hover svg path,
+.footer-section .footer-menu ul li.whishlist-menu-item a:hover svg path{
+    fill: transparent !important;
+}
+
+.footer-section .footer-menu ul li.heart-menu-item a:hover svg path{
+    stroke: var(--btn-bg);
+}
 /* Home Page CSS Ends */
+
+/* Details Page CSS Starts */
+
+.header-section .filter-btn a i{
+    color: var(--white);
+}
+
+.shoes360deg-section{
+    padding: 0 20px;
+}
+
+.shoes360deg-section .shoes-deg-section img{
+    cursor: ew-resize;
+}
+
+.shoes360deg-section .shoes-deg-section #preload-imgs{
+    display: none;
+}
+
+.shoesdetail-section{
+    padding: 20px 10px;
+    background: var(--color-2);
+    border-radius: 16px 16px 0 0;
+}
+
+.shoesdetail-section .shoes-detail h5{
+    font-size: var(--font-7);
+    font-weight: 400;
+    color: var(--btn-bg);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.shoesdetail-section .shoes-detail h2{
+    font-size: var(--font-3);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.shoesdetail-section .shoes-detail h3{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.shoesdetail-section .shoes-detail p{
+    font-size: var(--font-7);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.4em;
+    margin-bottom: 20px;
+}
+
+.shoesdetail-section .shoes-gallery h2{
+    font-size: var(--font-4);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.shoesdetail-section .shoes-gallery ul{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.shoesdetail-section .shoes-gallery ul li{
+    margin-right: 20px;
+}
+
+.shoesdetail-section .shoes-gallery ul li:last-child{
+    margin-right: 0;
+}
+
+.shoesdetail-section .shoes-gallery ul li a{
+    padding: 10px;
+    background: var(--background);
+    border-radius: 16px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+.shoesdetail-section .shoes-gallery ul li a img{
+    transform: rotate(-14.5deg)
+}
+
+.shoesdetail-section .shoes-gallery ul li a:hover{
+    background: var(--btn-bg);
+}
+
+
+/* Details Page CSS Ends */
