@@ -80,6 +80,8 @@
 
     --btn-bg: #5B9EE1;
 
+    --box-shadow-color: #485F761F;
+
     --font-1: 40px;
     --font-2: 28px;
     --font-3: 24px;
@@ -727,8 +729,68 @@ ul li, ol li{
     color: var(--white);
 }
 
+.shoes-deg-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.circular-slider-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.circular-slider {
+    position: absolute;
+    width: 100%;
+    appearance: none; /* Remove default styling */
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid var(--btn-bg);
+    outline: none;
+    pointer-events: all; /* Ensure it is interactable */
+    cursor: pointer;
+}
+
+/* Hide the default thumb and style it as part of the circle */
+.circular-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    background: url('../images/arrows.svg'), var(--btn-bg);
+    background-position: center center;
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+}
+
+.circular-slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    background: url('../images/arrows.svg'), var(--btn-bg);
+    background-position: center center;
+    background-size: 70% auto;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    pointer-events: all;
+}
+
 .shoes360deg-section{
-    padding: 0 20px;
+    padding: 0 10px 60px;
 }
 
 .shoes360deg-section .shoes-deg-section img{
@@ -740,9 +802,17 @@ ul li, ol li{
 }
 
 .shoesdetail-section{
-    padding: 20px 10px;
+    padding: 20px 0 0;
     background: var(--color-2);
     border-radius: 16px 16px 0 0;
+    position: relative;
+}
+
+.shoesdetail-section .shoes-detail,
+.shoesdetail-section .shoes-gallery,
+.shoesdetail-section .shoes-size{
+    margin-bottom: 30px;
+    padding: 0 10px;
 }
 
 .shoesdetail-section .shoes-detail h5{
@@ -779,7 +849,8 @@ ul li, ol li{
     margin-bottom: 20px;
 }
 
-.shoesdetail-section .shoes-gallery h2{
+.shoesdetail-section .shoes-gallery h2,
+.shoesdetail-section .shoes-size .size h2{
     font-size: var(--font-4);
     font-weight: 500;
     color: var(--white);
@@ -822,5 +893,109 @@ ul li, ol li{
     background: var(--btn-bg);
 }
 
+.shoesdetail-section .shoes-size .size{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.shoesdetail-section .shoes-size .size ul,
+.shoesdetail-section .shoes-size .size-list ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.shoesdetail-section .shoes-size .size ul li{
+    margin-left: 10px;
+}
+
+.shoesdetail-section .shoes-size .size ul li:first-child{
+    margin-left: 0;
+}
+
+.shoesdetail-section .shoes-size .size ul li a{
+    font-size: var(--font-7);
+    font-weight: 500;
+    line-height: 1.2em;
+    color: var(--color-1);
+}
+
+.shoesdetail-section .shoes-size .size ul li a:hover,
+.shoesdetail-section .shoes-size .size ul li.active a{
+    color: var(--white);
+}
+
+.shoesdetail-section .shoes-size .size-list{
+    margin-top: 20px;
+}
+
+.shoesdetail-section .shoes-size .size-list ul li{
+    margin-right: 15px;
+}
+
+.shoesdetail-section .shoes-size .size-list ul li:last-child{
+    margin-right: 0;
+}
+
+.shoesdetail-section .shoes-size .size-list ul li a{
+    width: 45px;
+    height: 45px;
+    background: var(--background);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    color: var(--color-1);
+}
+
+.shoesdetail-section .shoes-size .size-list ul li a:hover,
+.shoesdetail-section .shoes-size .size-list ul li.active a{
+    background: var(--btn-bg);
+    color: var(--white);
+}
+
+.price-and-atc-section{
+    padding: 20px 10px;
+    background: var(--color-2);
+    border-radius: 24px 24px 0 0;
+    position: sticky;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    box-shadow: -1.5px 0 4px 0 var(--box-shadow-color);
+}
+
+.price-and-atc-section .price-block h5{
+    font-size: var(--font-6);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.price-and-atc-section .price-block h2{
+    font-size: var(--font-4);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.price-and-atc-section .addtocart-btn .btn-addtocart{
+    width: 100%;
+    display: inline-block;
+    font-size: var(--font-5);
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 16px 32px;
+    color: var(--white);
+    background: var(--btn-bg);
+}
+
+.price-and-atc-section .addtocart-btn .btn-addtocart:hover{
+    background: var(--white);
+    color: var(--btn-bg);
+}
 /* Details Page CSS Ends */

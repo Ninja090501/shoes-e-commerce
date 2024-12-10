@@ -23,77 +23,18 @@
         });
     });
 
-    // 360 Degree Image
-    var num = 2; // the total number of images 
+    // 360 Degree Rotation Using Circular Control
+    const productImage = document.getElementById("productImage");
+    const circularSlider = document.getElementById("circularSlider");
 
-    // Preload all the images into hidden div
-    for (var i=1 ; i<=num ; i++) {
-        var img = document.createElement('img');
-        img.src = './images/360/Group-294('+i+').png';
-        document.getElementById('preload-imgs').appendChild(img);
-    }
-
-    // Control swipes using jquery.touchSwipe.min.js
-    // http://labs.rampinteractive.co.uk/touchSwipe/
-    var swipeOptions=
-    {
-        triggerOnTouchEnd : true,	
-        swipeStatus : swipeStatus,
-        allowPageScroll:"vertical",
-        threshold:75			
-    }
-
-    $(function()
-    {				
-        imgs = $(".img-container"); // the element that will be swipeable
-        imgs.swipe( swipeOptions );
+    circularSlider.addEventListener("input", (event) => {
+        const rotationValue = event.target.value; // Get slider value (0 to 360)
+        updateRotation(rotationValue);
     });
 
-    function swipeStatus(event, phase, direction, distance) {
-        var duration = 0;
-        if(direction == "left") {
-            changeImg(distance);
-        }
-        else if (direction == "right") {
-            changeImgR(-distance);
-        }
+    function updateRotation(rotationValue) {
+        productImage.style.transform = `rotateY(${rotationValue}deg)`; // Rotate the image
     }
 
-    function changeImg (imgNum) {
-
-        // divide by 8 (or any number) to spread 
-        // it out so it doesn't load new img 
-        // every single px of swipe distance
-        imgNum = Math.floor(imgNum/1); 
-
-        if (imgNum < 1) {
-            imgNum += num;
-        }
-        if (imgNum > num) {
-            imgNum -= num;
-        }
-
-        // change the image src
-        document.getElementById("myImg").src="./images/360/Group-294("+imgNum+").png";
-    }
-
-    function changeImgR (imgNum) {
-
-        // divide by 8 (or any number) to spread 
-        // it out so it doesn't load new img 
-        // every single px of swipe distance
-        imgNum = Math.floor(imgNum/1); 
-
-        var num2 = -Math.abs(num); 
-        if (imgNum > num2) {
-            imgNum += num;
-        }
-        if (imgNum <= num2) {
-            imgNum += num*1;
-        }
-
-        // change the image src
-        document.getElementById("myImg").src="./images/360/Group-294("+imgNum+").png";
-    }
 
 })(jQuery);

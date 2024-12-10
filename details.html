@@ -55,8 +55,12 @@
         <div class="container">
             <div class="col-12">
                 <div class="shoes-deg-section">
-                    <img src="./images/360/Group-294(1).png" alt="Detail Page Shoes" id="myImg" />
-                    <div id="preload-imgs"></div>
+                    <div class="viewer-container">
+                        <img src="./images/Group 294.png" class="product-image" id="productImage" alt="Product Image" />
+                    </div>
+                    <div class="circular-slider-container">
+                        <input type="range" id="circularSlider" class="circular-slider" min="0" max="180" value="0" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,27 +70,64 @@
     <!-- Shoes Details Starts -->
     <div class="shoesdetail-section">
         <div class="container">
-            <div class="col-12">
-                <div class="shoes-detail">
-                    <h5>Best Seller</h5>
-                    <h2>Nike Air Jordan</h2>
-                    <h3>$967.800</h3>
-                    <p>Air Jordan is an American brand of basketball shoes athletic, casual, and style clothing produced by Nike....</p>                    
-                </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="shoes-detail">
+                        <h5>Best Seller</h5>
+                        <h2>Nike Air Jordan</h2>
+                        <h3>$967.800</h3>
+                        <p>Air Jordan is an American brand of basketball shoes athletic, casual, and style clothing produced by Nike....</p>                    
+                    </div>
 
-                <div class="shoes-gallery">
-                    <h2>Gallery</h2>
-                    <ul>
-                        <li><a href="#"><img src="./images/best-seller-2.png" alt="Gallery 1"></a></li>
-                        <li><a href="#"><img src="./images/best-seller-1.png" alt="Gallery 2"></a></li>
-                        <li><a href="#"><img src="./images/new-arriavals-img.png" alt="Gallery 3"></a></li>
-                    </ul>
+                    <div class="shoes-gallery">
+                        <h2>Gallery</h2>
+                        <ul>
+                            <li><a href="#"><img src="./images/best-seller-2.png" alt="Gallery 1"></a></li>
+                            <li><a href="#"><img src="./images/best-seller-1.png" alt="Gallery 2"></a></li>
+                            <li><a href="#"><img src="./images/new-arriavals-img.png" alt="Gallery 3"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="shoes-size">
+                        <div class="size">
+                            <h2>Size</h2>
+                            <ul>
+                                <li class="active"><a href="#">EU</a></li>
+                                <li><a href="#">US</a></li>
+                                <li><a href="#">UK</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="size-list">
+                            <ul>
+                                <li><a href="#">38</a></li>
+                                <li><a href="#">39</a></li>
+                                <li class="active"><a href="#">40</a></li>
+                                <li><a href="#">41</a></li>
+                                <li><a href="#">42</a></li>
+                                <li><a href="#">43</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row price-and-atc-section align-items-center">
+                <div class="col-5">
+                    <div class="price-block">
+                        <h5>Price</h5>
+                        <h2>$849.69</h2>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div class="addtocart-btn">
+                        <a href="#" class="btn btn-addtocart">Add to Cart</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Shoes Details Ends -->
-    
+
 <!-- JQuery Library File -->
 <script src="./js/jquery-1.12.4.min.js"></script>
 <!-- Bootstrap JS -->
