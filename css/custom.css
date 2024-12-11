@@ -399,7 +399,9 @@ ul li, ol li{
 }
 
 .header-section .filter-btn a,
-.header-section .whishlist-btn a{
+.header-section .whishlist-btn a,
+.header-section .whishlistbtn-detail a,
+.header-section .favourite-btn a{
     display: inline-block;
     width: 44px;
     height: 44px;
@@ -413,7 +415,9 @@ ul li, ol li{
 }
 
 .header-section .filter-btn a:hover,
-.header-section .whishlist-btn a:hover{
+.header-section .whishlist-btn a:hover,
+.header-section .whishlistbtn-detail a:hover,
+.header-section .favourite-btn a:hover{
     background-color: var(--btn-bg);
 }
 
@@ -999,3 +1003,317 @@ ul li, ol li{
     color: var(--btn-bg);
 }
 /* Details Page CSS Ends */
+
+/* Favourite Page CSS Starts */
+.header-section .header-title{
+    text-align: center;
+}
+
+.header-section .header-title h2{
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    position: relative;
+    vertical-align: middle;
+}
+
+.favourite-list-section{
+    padding: 20px 10px;
+}
+
+.favourite-list-section .favourite-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.favourite-list-section .favourite-list .item{
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 16px;
+    background: var(--color-2);
+    position: relative;
+}
+
+.favourite-list-section .favourite-list .item:nth-of-type( 2n + 2 ){
+    margin-right: 0;
+}
+
+.favourite-list-section .favourite-list .item .item-image{
+    text-align: center;
+}
+
+.favourite-list-section .favourite-list .item .item-image img{
+    transform: rotate(10deg);
+}
+
+.favourite-list-section .favourite-list .item .item-info h5{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--btn-bg);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.favourite-list-section .favourite-list .item .item-info{
+    margin-bottom: 10px;
+}
+
+.favourite-list-section .favourite-list .item .item-info h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.favourite-list-section .favourite-list .item .item-price-color{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.favourite-list-section .favourite-list .item .item-price-color .price,
+.favourite-list-section .favourite-list .item .item-price-color .color{
+    width: 50%;
+}
+
+.favourite-list-section .favourite-list .item .item-price-color .price h2{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.favourite-list-section .favourite-list .item .item-price-color .color ul{
+    display: flex;
+    flex: wrap;
+    justify-content: end;
+}
+
+.favourite-list-section .favourite-list .item .item-price-color .color ul li{
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--background);
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.favourite-list-section .favourite-list .item .item-price-color .color ul li:last-child{
+    margin-right: 0;
+}
+
+.favourite-list-section .favourite-list .item .item-heart-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.favourite-list-section .favourite-list .item .item-heart-btn a{
+    width: 28px;
+    height: 28px;
+    background: var(--background);
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.favourite-list-section .favourite-list .item .item-heart-btn a svg{
+    width: 20px;
+    height: 20px;
+}
+
+.favourite-list-section .favourite-list .item .item-heart-btn a:hover svg path,
+.favourite-list-section .favourite-list .item .item-heart-btn a.active svg path{
+    stroke: var(--color-4);
+}
+/* Favourite Page CSS Ends */
+
+/* My Cart Page CSS Starts */
+.cart-list-section{
+    padding: 20px 10px;
+    height: 100vh;
+}
+
+.cart-list-section .cart-list .item{
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-list-section .cart-list .item .item-image{
+    width: 25%;
+    padding: 10px;
+    background: var(--color-2);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-list-section .cart-list .item .item-image img{
+    transform: rotate(-14.5deg)
+}
+
+.cart-list-section .cart-list .item .item-info{
+    width: 65%;
+    padding: 0 20px;
+}
+
+.cart-list-section .cart-list .item .item-info h2{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.cart-list-section .cart-list .item .item-info h5{
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cart-list-section .cart-list .item .item-action{
+    width: 10%;
+}
+
+.cart-list-section .cart-list .item .item-info .number-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-list-section .cart-list .item .item-info .number-input input[type="number"] {
+    text-align: center;
+    font-size: var(--font-7);
+    border: none;
+    color: var(--white);
+    background: transparent ;
+}
+
+.cart-list-section .cart-list .item .item-info .number-input button {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-2);
+    color: var(--white);
+    font-size: var(--font-8);
+    font-weight: 500;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-list-section .cart-list .item .item-info .number-input button:hover,
+.cart-list-section .cart-list .item .item-info .number-input button:active {
+    background-color: var(--btn-bg);
+}
+
+.cart-list-section .cart-list .item .item-action{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.cart-list-section .cart-list .item .item-action h2{
+    width: 100%;
+    text-align: center;
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cart-list-section .cart-list .item .item-action a:hover svg path{
+    stroke: var(--color-4);
+}
+
+.calculation-section{
+    position: sticky;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    padding: 20px 10px;
+    border-radius: 24px 24px 0 0;
+    background: var(--color-2);
+}
+
+.calculation-section .calculation table{
+    width: 100%;
+}
+
+.calculation-section .calculation table tr td{
+    padding: 15px 0;
+}
+
+.calculation-section .calculation table tr td.title{
+    text-align: left;
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--color-1);
+    line-height: 1.2em;
+}
+
+.calculation-section .calculation table tr td.price{
+    text-align: right;
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.calculation-section .calculation table tr.total{
+    border-top: 2px dashed var(--background)
+}
+
+.calculation-section .calculation table tr.total td.total-title{
+    text-align: left;
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--color-1);
+    line-height: 1.2em;
+}
+
+.calculation-section .calculation table tr.total td.total-price{
+    text-align: right;
+    font-size: var(--font-4);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.calculation-section .calculation a.checkout-btn{
+    width: 100%;
+    display: inline-block;
+    font-size: var(--font-5);
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 16px 32px;
+    color: var(--white);
+    background: var(--btn-bg);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.calculation-section .calculation a.checkout-btn:hover{
+    background: var(--white);
+    color: var(--btn-bg)
+}
+/* My Cart Page CSS Ends */
