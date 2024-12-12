@@ -77,6 +77,7 @@
     --color-3: #737373;
     --color-4: #F87265;
     --color-5: #E5EEF7;
+    --color-6: #202E3C;
 
     --btn-bg: #5B9EE1;
 
@@ -1299,7 +1300,8 @@ ul li, ol li{
     line-height: 1.2em;
 }
 
-.calculation-section .calculation a.checkout-btn{
+.calculation-section .calculation a.checkout-btn,
+.calculation-section .calculation button.checkout-btn{
     width: 100%;
     display: inline-block;
     font-size: var(--font-5);
@@ -1312,8 +1314,195 @@ ul li, ol li{
     margin-top: 20px;
 }
 
-.calculation-section .calculation a.checkout-btn:hover{
+.calculation-section .calculation a.checkout-btn:hover,
+.calculation-section .calculation button.checkout-btn:hover{
     background: var(--white);
     color: var(--btn-bg)
 }
 /* My Cart Page CSS Ends */
+
+/* Checkout Page CSS Starts */
+.checkout-section-wrapper .checkout-section{
+    padding: 20px;
+    background: var(--color-2);
+    border-radius: 16px;
+    margin: 0 10px 20px;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information h2,
+.checkout-section-wrapper .checkout-section .address-information h2,
+.checkout-section-wrapper .checkout-section .payment-method h2{
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 20px;
+    text-transform: capitalize;  
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-icon,
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-action,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-icon,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-action{
+    width: 15%;
+}
+
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail{
+    padding: 0 10px;
+    width: 70%;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail h3,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail h3{
+    font-size: var(--font-7);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail p,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail p{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail form,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail form{
+    display: none;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail form input,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail form input{
+    font-size: var(--font-7);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+    border: 2px solid var(--btn-bg);
+    border-radius: 50px;
+    padding: 10px 20px;
+    background: var(--color-2);
+    width: 100%;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail form input:focus,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail form input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail form input::placeholder,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail form input::placeholder{
+    color: var(--white);
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-detail form button,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-detail form button{
+    font-size: var(--font-7);
+    font-weight: 400;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+    color: var(--white);
+    background: var(--btn-bg);
+    text-align: center;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-action,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-action{
+    text-align: right;
+}
+
+.checkout-section-wrapper .checkout-section .contact-information .email-info .email-action a:hover svg path,
+.checkout-section-wrapper .checkout-section .contact-information .contact-info .contact-action a:hover svg path{
+    stroke: var(--btn-bg);
+}
+
+.checkout-section-wrapper .checkout-section .address-information select,
+.checkout-section-wrapper .checkout-section .payment-method .payment select{
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    border: none;
+    font-size: var(--font-6);
+    font-weight: 400;
+    color: var(--color-1);
+    margin-bottom: 20px;
+}
+
+.checkout-section-wrapper .checkout-section .payment-method .payment select{
+    width: 80%;
+    margin-bottom: 0;
+}
+
+.checkout-section-wrapper .checkout-section .address-information select:focus,
+.checkout-section-wrapper .checkout-section .payment-method .payment select{
+    outline: none;
+    box-shadow: none;
+}
+
+.checkout-section-wrapper .checkout-section .address-information img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.checkout-section-wrapper .checkout-section .payment-method .payment{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup-model{
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.3);
+}
+
+.popup-model .popup-content{
+    text-align: center;
+    background: var(--color-6); 
+    margin: 55% auto; 
+    padding: 40px 60px; 
+    width: 90%;
+    border-radius: 20px; 
+    position: relative;
+}
+
+.popup-model .popup-content h2{
+    font-size: var(--font-4);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin: 40px 0;
+}
+
+.popup-model .popup-content a.btn-backtohome{
+    width: 100%;
+    display: inline-block;
+    font-size: var(--font-5);
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 16px 32px;
+    color: var(--white);
+    background: var(--btn-bg);
+    text-align: center;
+}
+/* Checkout Page CSS Ends */
