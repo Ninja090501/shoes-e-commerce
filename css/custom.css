@@ -78,6 +78,7 @@
     --color-4: #F87265;
     --color-5: #E5EEF7;
     --color-6: #202E3C;
+    --color-7: #2D3B48;
 
     --btn-bg: #5B9EE1;
 
@@ -1506,3 +1507,405 @@ ul li, ol li{
     text-align: center;
 }
 /* Checkout Page CSS Ends */
+
+/* Notification Page CSS Starts */
+.header-section .clear-all{
+    text-align: right;
+}
+
+.header-section .clear-all a.btn-clearall{
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--btn-bg);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    padding: 0;
+}
+
+.header-section .clear-all a.btn-clearall:hover{
+    color: var(--white);
+}
+
+.notification-section-wrapper{
+    padding: 10px;
+}
+
+.notification-section-wrapper .notification-section .notification{
+    margin-bottom: 40px;
+}
+
+.notification-section-wrapper .notification-section .notification h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.notification-section-wrapper .notification-section .notification .item{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-image{
+    width: 25%;
+    padding: 20px 10px;
+    background: var(--color-2);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-image img{
+    width: 100%;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-info{
+    width: 60%;
+    padding: 0 15px;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-info a h2{
+    font-size: var(--font-7);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-info a:hover h2{
+    color: var(--btn-bg);
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-info p{
+    font-size: var(--font-8);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-info p span{
+    color: var(--color-1);
+    margin-left: 10px;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-time{
+    width: 15%;
+    position: relative;
+}
+
+.notification-section-wrapper .notification-section .notification .item .item-time h2{
+    font-size: var(--font-9);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+    margin: 0;
+    text-align: right;
+}
+
+.notification-section-wrapper .notification-section .notification .item:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+    background: var(--btn-bg);
+    margin-top: -8px;
+}
+
+.notification-section-wrapper .notification-section .notification.yesterday-notification .item:after{
+    background: var(--color-1);
+}
+/* Notification Page CSS Ends */
+
+/* Best Seller Page CSS Starts */
+.header-section .bestseller-btn{
+    text-align: right;
+}
+
+.header-section .bestseller-btn a{
+    padding: 0;
+    margin-right: 10px;
+}
+
+.header-section .bestseller-btn a:last-child{
+    margin-right: 0;
+}
+
+.header-section .bestseller-btn a:hover svg path{
+    stroke: var(--btn-bg);
+}
+
+.best-seller-section{
+    padding: 20px 10px;
+}
+
+.best-seller-section .best-seller{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.best-seller-section .best-seller .item{
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    border-radius: 16px;
+    background: var(--color-2);
+    position: relative;
+}
+
+.best-seller-section .best-seller .item:nth-of-type( 2n + 2 ){
+    margin-right: 0;
+}
+
+.best-seller-section .best-seller .item .item-image{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.best-seller-section .best-seller .item .item-image img{
+    transform: rotate(-14.5deg);
+}
+
+.best-seller-section .best-seller .item .item-info h5{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--btn-bg);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.best-seller-section .best-seller .item .item-info{
+    margin-bottom: 20px;
+}
+
+.best-seller-section .best-seller .item .item-info h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+}
+
+.best-seller-section .best-seller .item .item-info p{
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+}
+
+.best-seller-section .best-seller .item .item-price-color{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.best-seller-section .best-seller .item .item-price-color .price,
+.best-seller-section .best-seller .item .item-price-color .color{
+    width: 50%;
+}
+
+.best-seller-section .best-seller .item .item-price-color .price h2{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.best-seller-section .best-seller .item .item-price-color .color ul{
+    display: flex;
+    flex: wrap;
+    justify-content: end;
+}
+
+.best-seller-section .best-seller .item .item-price-color .color ul li{
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--background);
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.best-seller-section .best-seller .item .item-price-color .color ul li:last-child{
+    margin-right: 0;
+}
+
+.best-seller-section .best-seller .item .item-heart-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.best-seller-section .best-seller .item .item-heart-btn a{
+    width: 28px;
+    height: 28px;
+    background: var(--background);
+    border-radius: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+
+.best-seller-section .best-seller .item .item-heart-btn a svg{
+    width: 20px;
+    height: 20px;
+}
+
+.best-seller-section .best-seller .item .item-heart-btn a:hover svg path,
+.best-seller-section .best-seller .item .item-heart-btn a.active svg path{
+    stroke: var(--color-4);
+}
+/* Best Seller Page CSS Ends */
+
+/* Side Menu Page CSS Starts */
+.side-menu-section-wrapper{
+    padding: 80px 10px;
+    background: url('../images/user-bg-img.png') no-repeat center right;
+    background-size: 40% auto;
+}
+
+.side-menu-section-wrapper .side-menu{
+    width: 50%;
+}
+
+.side-menu-section-wrapper .side-menu .user-block{
+    margin-bottom: 40px;
+}
+
+.side-menu-section-wrapper .side-menu .user-block img{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.side-menu-section-wrapper .side-menu .user-block p{
+    font-size: var(--font-6);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.side-menu-section-wrapper .side-menu .user-block h2{
+    font-size: var(--font-3);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+}
+
+.side-menu-section-wrapper .side-menu .menu-list ul li{
+    margin-bottom: 40px;
+}
+
+.side-menu-section-wrapper .side-menu .menu-list ul li:last-child{
+    margin-bottom: 0;
+}
+
+.side-menu-section-wrapper .side-menu .menu-list ul li a,
+.side-menu-section-wrapper .side-menu .menu-list a.sign-out-btn{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.side-menu-section-wrapper .side-menu .menu-list ul li a:hover,
+.side-menu-section-wrapper .side-menu .menu-list a.sign-out-btn:hover{
+    color: var(--btn-bg);
+}
+
+.side-menu-section-wrapper .side-menu .menu-list ul li a svg,
+.side-menu-section-wrapper .side-menu .menu-list a.sign-out-btn svg{
+    margin-right: 20px;
+}
+
+.side-menu-section-wrapper .side-menu .menu-list hr{
+    width: 147px;
+    height: 2px;
+    background: var(--color-7);
+    margin: 60px 0;
+}
+/* Side Menu Page CSS Ends */
+
+/* Profile Page CSS Starts */
+.header-section .edit-btn .btn-back:hover svg path{
+    stroke: var(--white);
+}
+
+.profile-section{
+    padding: 20px 10px;
+}
+
+.profile-section .profile form .form-group.upload-img{
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.profile-section .profile form .form-group.upload-img img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.profile-section .profile form .form-group.upload-img label{
+    width: 100%;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+}
+
+.profile-section .profile form .form-group.upload-img h2{
+    font-size: var(--font-4);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+.profile-section .profile form .form-group{
+    margin-bottom: 20px;
+}
+
+.profile-section .profile form .form-group label{
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.profile-section .profile form .form-group input{
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 50px;
+    background: var(--color-2);
+    color: var(--white);
+}
+
+.profile-section .profile form .form-group input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.profile-section .profile form .form-group input::placeholder{
+    color: var(--white);
+}
+/* Profile Page CSS Ends */
