@@ -1909,3 +1909,166 @@ ul li, ol li{
     color: var(--white);
 }
 /* Profile Page CSS Ends */
+
+/* Account & Settings Page CSS Starts. */
+.account-secttigs-section-wrapper{
+    padding: 10px;
+}
+
+.account-secttigs-section-wrapper .account-section,
+.account-secttigs-section-wrapper .app-setting-section{
+    margin-bottom: 40px;
+}
+
+.account-secttigs-section-wrapper .account-section h2,
+.account-secttigs-section-wrapper .app-setting-section h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white); 
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.account-secttigs-section-wrapper .account-section ul li,
+.account-secttigs-section-wrapper .app-setting-section ul li{
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-2);
+}
+
+.account-secttigs-section-wrapper .account-section ul li a:hover{
+    color: var(--btn-bg);
+}
+
+.account-secttigs-section-wrapper .account-section ul li a{
+    position: relative;
+    width: 100%;
+}
+
+.account-secttigs-section-wrapper .account-section ul li a:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('../images/right-arrow-icon.svg') no-repeat right center;
+    width: 100%;
+    height: 100%;
+}
+
+.account-secttigs-section-wrapper .account-section ul li a svg{
+    margin-right: 10px;
+}
+
+.account-secttigs-section-wrapper .account-section ul li a,
+.account-secttigs-section-wrapper .app-setting-section ul li{
+    font-size: var(--font-6);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2em;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-2);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--white);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch input:checked + .slider {
+    background-color: var(--btn-bg);
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch .slider.round {
+    border-radius: 34px;
+}
+
+.account-secttigs-section-wrapper .app-setting-section ul li .switch .slider.round:before {
+    border-radius: 50%;
+}
+  
+/* Account & Settings Page CSS Ends. */
+
+/* Search Page Css Starts. */
+.header-section .cancel-btn{
+    text-align: center !important;
+}
+
+.search-section .search-history{
+    padding: 20px 0;
+}
+
+.search-section .search-history h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 20px;
+}
+
+.search-section .search-history ul li{
+    margin-bottom: 10px;
+}
+
+.search-section .search-history ul li:last-child{
+    margin-bottom: 0;
+}
+
+.search-section .search-history ul li a{
+    width: 100%;
+    font-size: var(--font-6);
+    font-weight: 400;
+    color: var(--white);
+    line-height: 1.2em;
+    text-transform: capitalize;
+}
+
+.search-section .search-history ul li a:hover{
+    color: var(--btn-bg);
+}
+
+.search-section .search-history ul li a svg{
+    margin-right: 10px;
+}
+/* Search Page Css Ends. */
