@@ -24,7 +24,7 @@
             <div class="row align-items-center">
                 <div class="col-2">
                     <div class="filter-btn">
-                        <a href="#" class="btn btn-back">
+                        <a href="#" class="btn btn-back filter-block">
                             <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5C4.38071 5 5.5 3.88071 5.5 2.5C5.5 1.11929 4.38071 0 3 0C1.61929 0 0.5 1.11929 0.5 2.5C0.5 3.88071 1.61929 5 3 5ZM13 14C14.3807 14 15.5 12.8807 15.5 11.5C15.5 10.1193 14.3807 9 13 9C11.6193 9 10.5 10.1193 10.5 11.5C10.5 12.8807 11.6193 14 13 14ZM5.5 11.5C5.5 12.8807 4.38071 14 3 14C1.61929 14 0.5 12.8807 0.5 11.5C0.5 10.1193 1.61929 9 3 9C4.38071 9 5.5 10.1193 5.5 11.5ZM13 5C14.3807 5 15.5 3.88071 15.5 2.5C15.5 1.11929 14.3807 0 13 0C11.6193 0 10.5 1.11929 10.5 2.5C10.5 3.88071 11.6193 5 13 5Z" fill="white"/>
                             </svg>
@@ -318,6 +318,63 @@
         </div>
     </footer>
     <!-- Footer Section Ends -->
+
+    <!-- Filter Section Starts -->
+    <div class="filter-section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="filter-section">
+                        <div class="filter-header">
+                            <h2>Filters</h2>
+                            <a href="#">reset</a>
+                        </div>
+
+                        <div class="gender-filter">
+                            <h2>Gender</h2>
+                            <ul>
+                                <li><a href="#" class="active">Men</a></li>
+                                <li><a href="#">Women</a></li>
+                                <li><a href="#">Unisex</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="size-filter">
+                            <h2>Size</h2>
+                            <ul>
+                                <li><a href="#">uk 4.4</a></li>
+                                <li><a href="#" class="active">us 5.5</a></li>
+                                <li><a href="#">uk 6.5</a></li>
+                                <li><a href="#">eu 11.5</a></li>
+                                <li><a href="#">uk 4.4</a></li>
+                                <li><a href="#">us 5.5</a></li>
+                                <li><a href="#">uk 6.5</a></li>
+                                <li><a href="#">eu 11.5</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="price-filter">
+                            <h2>Price</h2>
+                            <div class="range-slider">
+                                <!-- Price indicators -->
+                                <div id="min-indicator" class="price-indicator" style="left: 0;">$16</div>
+                                <div id="max-indicator" class="price-indicator" style="left: 100%;">$350</div>
+                    
+                                <!-- Minimum and Maximum range inputs -->
+                                <input type="range" id="min-price" min="0" max="500" value="16" step="1">
+                                <input type="range" id="max-price" min="0" max="500" value="350" step="1">
+                            </div>
+                        </div>
+
+                        <div class="filter-button">
+                            <a href="../home/home.html" class="apply-btn">Apply</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Filter Section Ends -->
     
 <!-- JQuery Library File -->
 <script src="../js/jquery-1.12.4.min.js"></script>

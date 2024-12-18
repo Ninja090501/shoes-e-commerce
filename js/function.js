@@ -162,6 +162,82 @@
             console.error("Either .checkout-btn or .popup-model element is missing.");
         }
     });
+
+    // Price Range
+    const minPrice = document.getElementById('min-price');
+    const maxPrice = document.getElementById('max-price');
+    const minIndicator = document.getElementById('min-indicator');
+    const maxIndicator = document.getElementById('max-indicator');
+    const rangeSlider = document.querySelector('.range-slider');
+    
+    const minGap = 10; // Minimum gap between sliders
+    
+    function updatePrices() {
+        let min = parseInt(minPrice.value);
+        let max = parseInt(maxPrice.value);
+    
+        // Ensure no overlap
+        if (max - min < minGap) {
+            if (event.target === minPrice) {
+                minPrice.value = max - minGap;
+            } else {
+                maxPrice.value = parseInt(minPrice.value) + minGap;
+            }
+        }
+    
+        // Update percentage variables for CSS
+        const minPercent = ((minPrice.value - minPrice.min) / (minPrice.max - minPrice.min)) * 100;
+        const maxPercent = ((maxPrice.value - maxPrice.min) / (maxPrice.max - maxPrice.min)) * 100;
+    
+        rangeSlider.style.setProperty('--min-percent', `${minPercent}`);
+        rangeSlider.style.setProperty('--max-percent', `${maxPercent}`);
+    
+        // Update price indicators
+        minIndicator.textContent = `$${minPrice.value}`;
+        maxIndicator.textContent = `$${maxPrice.value}`;
+    
+        // Update indicator positions
+        minIndicator.style.left = `${minPercent}%`;
+        maxIndicator.style.left = `${maxPercent}%`;
+    }
+    
+    // Event listeners
+    minPrice.addEventListener('input', updatePrices);
+    maxPrice.addEventListener('input', updatePrices);
+    
+    // Initial position setup
+    updatePrices();
+
+    // Hide and Show Filter Block
+    const filterButton = document.querySelector('.filter-block');
+
+    // Add a click event listener to the button
+    if (filterButton) {
+        filterButton.addEventListener('click', () => {
+            // Find the element with the class 'filter-section-wrapper'
+            const filterSectionWrapper = document.querySelector('.filter-section-wrapper');
+            
+            // Check if the element exists
+            if (filterSectionWrapper) {
+                // Set display of filter-section-wrapper to 'block'
+                filterSectionWrapper.style.display = 'block';
+
+                // Create a full-screen background overlay
+                const overlay = document.createElement('div');
+                overlay.className = 'popup-overlay';
+                document.body.appendChild(overlay);
+
+                // Add a click event to the overlay to close the popup
+                overlay.addEventListener('click', () => {
+                    filterSectionWrapper.style.display = 'none';
+                    document.body.removeChild(overlay); // Remove the overlay
+                });
+            }
+        });
+    } else {
+        console.warn('Button with class "filter-block" not found.');
+    }
+
     
 
 })(jQuery);

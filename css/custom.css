@@ -79,6 +79,7 @@
     --color-5: #E5EEF7;
     --color-6: #202E3C;
     --color-7: #2D3B48;
+    --color-8: #1F2C39;
 
     --btn-bg: #5B9EE1;
 
@@ -2072,3 +2073,213 @@ ul li, ol li{
     margin-right: 10px;
 }
 /* Search Page Css Ends. */
+
+/* Filter Section Starts */
+
+.filter-section-wrapper{
+    padding: 40px 10px 20px;
+    background: var(--color-8);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 1000;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background); /* Semi-transparent black background */
+    z-index: 999; /* Ensure it stays on top */
+    opacity: 46%;
+}
+
+.filter-section-wrapper .filter-section{
+    position: relative;
+}
+
+.filter-section-wrapper .filter-section:after{
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    width: 60px;
+    height: 5px;
+    border-radius: 16px;
+    margin-left: -30px;
+}
+
+.filter-section-wrapper .filter-section .filter-header{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.filter-section-wrapper .filter-section .filter-header h2{
+    font-size: var(--font-3);
+    font-weight: 500;
+    color: var(--white); 
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.filter-section-wrapper .filter-section .filter-header a{
+    padding: 0;
+    display: inline-block;
+    font-size: var(--font-8);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.filter-section-wrapper .filter-section .gender-filter,
+.filter-section-wrapper .filter-section .size-filter,
+.filter-section-wrapper .filter-section .price-filter{
+    margin-bottom: 30px;
+}
+
+.filter-section-wrapper .filter-section .gender-filter h2,
+.filter-section-wrapper .filter-section .size-filter h2,
+.filter-section-wrapper .filter-section .price-filter h2{
+    font-size: var(--font-5);
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+.filter-section-wrapper .filter-section .gender-filter ul,
+.filter-section-wrapper .filter-section .size-filter ul{
+    display: flex;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.filter-section-wrapper .filter-section .gender-filter ul li,
+.filter-section-wrapper .filter-section .size-filter ul li{
+    margin-right: 20px;
+}
+
+.filter-section-wrapper .filter-section .gender-filter ul li:last-child,
+.filter-section-wrapper .filter-section .size-filter ul li:last-child{
+    margin-right: 0;
+}
+
+.filter-section-wrapper .filter-section .gender-filter ul li a,
+.filter-section-wrapper .filter-section .size-filter ul li a{
+    display: inline-block;
+    font-size: var(--font-6);
+    font-weight: 400;
+    color: var(--color-1);
+    line-height: 1.2em;
+    background: var(--background);
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.filter-section-wrapper .filter-section .gender-filter ul li a:hover,
+.filter-section-wrapper .filter-section .gender-filter ul li a.active,
+.filter-section-wrapper .filter-section .size-filter ul li a:hover,
+.filter-section-wrapper .filter-section .size-filter ul li a.active{
+    background: var(--btn-bg);
+    color: var(--white);
+}
+
+.filter-section-wrapper .filter-section .size-filter ul li a{
+    width: 80px;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.filter-section-wrapper .filter-section .filter-header a:hover{
+    color: #fff;
+}
+
+.filter-section-wrapper .filter-section .price-filter .range-slider {
+    position: relative;
+    margin: 20px 0;
+    height: 50px;
+}
+
+.filter-section-wrapper .filter-section .price-filter .range-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: transparent; /* Transparent for custom track */
+    border-radius: 16px;
+    outline: none;
+    position: absolute;
+    top: 0;
+    pointer-events: none; /* Makes thumb interaction smoother */
+}
+
+.filter-section-wrapper .filter-section .price-filter .range-slider::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: var(--background);
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.filter-section-wrapper .filter-section .price-filter .range-slider::after {
+    content: '';
+    position: absolute;
+    height: 6px;
+    background: var(--btn-bg);
+    border-radius: 16px;
+    z-index: 2;
+    top: 0;
+    left: calc(var(--min-percent, 0) * 1%);
+    right: calc(100% - (var(--max-percent, 100) * 1%));
+}
+
+.filter-section-wrapper .filter-section .price-filter .range-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--white);
+    border: 2px solid var(--btn-bg);
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: all;
+    position: relative;
+    z-index: 3;
+}
+
+.filter-section-wrapper .filter-section .price-filter .range-slider .price-indicator {
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);
+    font-size: var(--font-6);
+    font-weight: 500;
+    color: var(--color-1);
+}
+
+.filter-section-wrapper .filter-section .filter-button a.apply-btn{
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    background: var(--btn-bg);
+    color: var(--white);
+    font-size: var(--font-5);
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+}
+/* Filter Section Ends */
