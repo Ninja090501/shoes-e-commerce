@@ -1324,6 +1324,10 @@ ul li, ol li{
 /* My Cart Page CSS Ends */
 
 /* Checkout Page CSS Starts */
+.checkout-section-wrapper{
+    height: 100vh;
+}
+
 .checkout-section-wrapper .checkout-section{
     padding: 20px;
     background: var(--color-2);
